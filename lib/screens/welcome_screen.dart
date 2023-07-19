@@ -3,7 +3,9 @@ import 'package:flash_chat_flutter/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-import '../componants/rounded_button.dart';
+import '../components/rounded_button.dart';
+
+// import '../componants/rounded_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String id = "welcome_screen"; //modifying the variable to make the variable available in the class
@@ -73,7 +75,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
 
             //Go to login screen.
             RoundedButton(
-              title: "log in",
+              title: "Log in",
               color: Colors.lightBlueAccent,
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
