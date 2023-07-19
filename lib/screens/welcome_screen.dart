@@ -55,17 +55,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     height: 60,
                   ),
                 ),
-                SizedBox(
-                  width: 250,
-                  child: DefaultTextStyle(
-                    style: TextStyle(fontSize: 45.0, fontWeight: FontWeight.w900, color: Colors.blueAccent),
-                    child: AnimatedTextKit(
-                      animatedTexts: [
-                        TypewriterAnimatedText('Flash Chat'),
-                      ],
+                AnimatedTextKit(animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Flash Chat',
+                    textStyle: TextStyle(
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
-                ),
+                ])
               ],
             ),
             SizedBox(
