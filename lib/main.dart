@@ -31,7 +31,8 @@ class FlashChat extends StatelessWidget {
   }
 }
 
-// return SizedBox(
+// return
+// SizedBox(
 // width: 250.0,
 // child: DefaultTextStyle(
 // style: const TextStyle(
