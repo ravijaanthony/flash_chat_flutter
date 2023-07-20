@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flash_chat_flutter/screens/chat_screen.dart';
 import 'package:flash_chat_flutter/screens/registration_screen.dart';
 import 'package:flash_chat_flutter/screens/welcome_screen.dart';
@@ -9,7 +10,11 @@ import 'package:flash_chat_flutter/screens/login_screen.dart';
 // import 'package:flash_chat/screens/registration_screen.dart';
 // import 'package:flash_chat/screens/chat_screen.dart';
 
-void main() => runApp(FlashChat());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Initialize Firebase
+  runApp(FlashChat());
+}
 
 class FlashChat extends StatelessWidget {
   @override
@@ -30,25 +35,3 @@ class FlashChat extends StatelessWidget {
     );
   }
 }
-
-// return
-// SizedBox(
-// width: 250.0,
-// child: DefaultTextStyle(
-// style: const TextStyle(
-// fontSize: 30.0,
-// fontFamily: 'Agne',
-// ),
-// child: AnimatedTextKit(
-// animatedTexts: [
-// TypewriterAnimatedText('Discipline is the best tool'),
-// TypewriterAnimatedText('Design first, then code'),
-// TypewriterAnimatedText('Do not patch bugs out, rewrite them'),
-// TypewriterAnimatedText('Do not test bugs out, design them out'),
-// ],
-// onTap: () {
-// print("Tap Event");
-// },
-// ),
-// ),
-// );
